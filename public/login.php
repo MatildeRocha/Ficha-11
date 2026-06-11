@@ -39,7 +39,7 @@ if (!empty($_SESSION['server_error'])) {
                 <div class="row">
                     <div class="col">
                         <!-- Formulário -->
-                        <form action="../private/processa_login.php" method="post">
+                        <form name="formulario" action="../private/processa_login.php" method="post">
                             <div class="mb-3">
                                 <!-- Utilizador -->
                                 <label for="email" class="form-label">Utilizador</label>
@@ -54,6 +54,13 @@ if (!empty($_SESSION['server_error'])) {
                                 <!-- Submit -->
                                 <button type="submit" class="btn btn-secondary px-4">
                                     Entrar <i class="fa-solid fa-right-to-bracket ms-2"></i>
+                                </button>
+                            </div>
+                            <!-- Botões de preenchimento automático (Fase de Testes) -->
+                            <div class="mt-2 text-center">
+                                <button type="button" id="preencher_adm" class="btn btn-outline-primary btn-sm me-2"> Preencher Admin
+                                </button>
+                                <button type="button" id="preencher_agnt" class="btn btn-outline-secondary btn-sm"> Preencher Agente
                                 </button>
                             </div>
                             <!-- -------------------------------------------------------------------- -->
@@ -85,5 +92,19 @@ if (!empty($_SESSION['server_error'])) {
         </div>
     </div>
 </div>
+
+<script>
+    // Preenchimento automático para testes
+    document.querySelector("#preencher_adm").addEventListener('click', () => {
+        const formulario = document.forms['formulario'];
+        formulario['text_username'].value = "admin@isep.pt";
+        formulario['text_password'].value = "$2y$10$aia";
+    });
+    document.querySelector("#preencher_agnt").addEventListener('click', () => {
+        const formulario = document.forms['formulario'];
+        formulario['text_username'].value = "agente1@isep.pt";
+        formulario['text_password'].value = "$2y$10$O";
+    });
+</script>
 
 <?php include '../private/includes/footer.php'; ?>

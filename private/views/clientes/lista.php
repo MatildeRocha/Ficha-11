@@ -113,8 +113,7 @@ $ligacao = null;
                                     <a href="editar.php?id_cliente=<?= aes_encrypt($cliente->id) ?>" class="btn btn-sm btn-outline-warning me-1"> <i
                                             class="fa-regular fa-pen-to-square"></i>
                                     </a>
-                                    <a href="apagar.php" class="btn btn-sm btn-outline-danger">
-                                        <i class="fa-solid fa-trash-can"></i>
+                                    <a href="apagar.php?id_cliente=<?= aes_encrypt($cliente->id) ?>" class="btn btn-sm btn-outline-danger"> <i class="fa-solid fa-trash-can"></i>
                                     </a>
                                 </td>
                             </tr>
