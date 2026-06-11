@@ -1,3 +1,22 @@
+<?php
+// --------------------------------------------------------------------
+// SEGURANÇA: Proteção de acesso à página de edição
+// Este ficheiro deve ser acedido apenas por utilizadores autenticados.
+// Caso não exista sessão iniciada, o utilizador será redirecionado para o login.
+// --------------------------------------------------------------------
+require_once __DIR__ . '/../../includes/funcoes.php';
+require_once __DIR__ . '/../../../config/config.php';
+require_once __DIR__ . '/../../includes/validacoes.php';
+redirect_if_not_logged(); // Inicia a sessão (se necessário) e verifica se o utilizador está autenticado
+
+$idClientEncrypted = $_GET['id_cliente'] ?? null;
+$idClient = aes_decrypt($idClientEncrypted);
+if (!$idClient || !is_numeric($idClient)) {
+    header('Location: ' . BASE_URL . '/private/views/clientes/lista.php');
+    exit;
+}
+?>
+
 <?php include '../../includes/header.php'; ?>
 
 <?php include '../../includes/nav.php'; ?>
@@ -14,13 +33,13 @@
                     <div class="card-body">
                         <h2 class="mb-4"><strong><i class="fa-solid fa-users me-2"></i>Atualização de dados</strong></h2>
                         <hr>
-                        <form action="#" method="post" novalidate>
+                        <form action="editar.php?id_cliente=<?= $idClientEncrypted ?>" method="post" novalidate>
                             <!-- Linhas e colunas com campos organizados -->
                             <!-- NOME -->
                             <div class="row mb-3">
                                 <div class="col-12">
                                     <label for="texto_nome" class="form-label">Nome Completo</label>
-                                    <input type="text" class="form-control" id="texto_nome" name="nome_cliente" value="Ana Beatriz Ferreira"
+                                    <input type="text" class="form-control" id="texto_nome" name="<?= htmlspecialchars($cliente->nome) ?>"
                                         required>
                                 </div>
                             </div>
@@ -30,7 +49,7 @@
                                     <label for="texto_endereco" class="form-label">Morada
                                         <small>(NºPorta, Andar)</small>
                                     </label>
-                                    <input type="text" class="form-control" id="texto_endereco" name="morada_cliente" value="Rua Dr. António Benardino de Almeida, 431 ">
+                                    <input type="text" class="form-control" id="texto_endereco" name="morada_cliente" value="<?= htmlspecialchars($cliente->morada) ?>">
                                 </div>
                             </div>
                             <!-- CÓDIGO POSTAL, CIDADE, TELEFONE E EMAIL -->
@@ -41,15 +60,15 @@
                                 </div>
                                 <div class="col-md-3">
                                     <label for="texto_cidade" class="form-label">Cidade</label>
-                                    <input type="text" class="form-control" id="texto_cidade" name="cid_cliente" value="Porto" required>
+                                    <input type="text" class="form-control" id="texto_cidade" name="cid_cliente" value="<?= htmlspecialchars($cliente->cidade) ?>" required>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="texto_cliente" class="form-label">Telefone</label>
-                                    <input type="text" class="form-control" id="texto_cliente" name="tel_cliente" value="934587621" required>
+                                    <input type="text" class="form-control" id="texto_cliente" name="tel_cliente" value="<?= htmlspecialchars($cliente->telefone) ?>" required>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="texto_email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="texto_email" name="email_cliente" value="ana.ferreira@isep.ipp.pt" required>
+                                    <input type="email" class="form-control" id="texto_email" name="email_cliente" value="<?= htmlspecialchars($cliente->email) ?>" required>
                                 </div>
                             </div>
                             <!-- SEXO E DATA DE NASCIMENTO -->
@@ -58,18 +77,18 @@
                                     <label class="form-label">Sexo</label>
                                     <div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="radio_gender" id="radio_m" value="m">
+                                            <input class="form-check-input" type="radio" name="radio_gender" id="radio_m" value="m" <?= $cliente->sexo == 'm' ? 'checked' : '' ?>>
                                             <label class="form-check-label" for="radio_m">Masculino</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="radio_gender" id="radio_f" value="f" checked>
+                                            <input class="form-check-input" type="radio" name="radio_gender" id="radio_f" value="f" checked <?= $cliente->sexo == 'f' ? 'checked' : '' ?>>
                                             <label class="form-check-label" for="radio_f">Feminino</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="texto_dnasc" class="form-label">Data de nascimento</label>
-                                    <input type="text" class="form-control" id="texto_dnasc" name="dnasc_cliente" value="1990-07-15" required>
+                                    <input type="text" class="form-control" id="texto_dnasc" name="dnasc_cliente" "<?= date('Y-m-d', strtotime($cliente->data_nascimento)) ?>" required>
                                 </div>
                             </div>
                             <!-- ESTADO CIVIL, SISTEMA DE SÁUDE E PROFISSÃO -->
