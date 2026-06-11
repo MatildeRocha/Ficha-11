@@ -27,6 +27,10 @@ require_once __DIR__ . '/../../config/config.php';
     <!-- DataTables CSS + JS -->
     <link rel="stylesheet" href="/Ficha%2008/private/assets/datatables/datatables.min.css">
     <script src="/Ficha%2008/private/assets/datatables/datatables.min.js"></script>
+    <!-- CSS do Flatpickr -->
+    <link rel="stylesheet" href="/isep-ginasio/private/assets/flatpickr/flatpickr.min.css">
+    <!-- JS do Flatpickr -->
+    <script src="/isep-ginasio/private/assets/flatpickr/flatpickr.js"></script>
 </head>
 
 <body>
