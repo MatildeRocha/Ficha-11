@@ -58,7 +58,7 @@ $ligacao = null;
 
 
             <div class="table-responsive">
-                <table class="table table-bordered table-striped align-middle">
+                <table id="tabela-clientes" class="table table-bordered table-striped align-middle">
                     <thead class="table-dark">
                         <tr>
                             <th>Nome</th>
@@ -101,5 +101,40 @@ $ligacao = null;
         </div>
     </div>
 </div>
+
+<script>
+    // tradução para português
+    $(document).ready(function() {
+        // datatable
+        $('#tabela-clientes').DataTable({
+            pageLength: 5,
+            pagingType: "full_numbers",
+            language: {
+                decimal: "",
+                emptyTable: "Sem dados disponíveis na tabela.",
+                info: "Mostrando _START_ até _END_ de _TOTAL_ registos",
+                infoEmpty: "Mostrando 0 até 0 de 0 registos",
+                infoFiltered: "(Filtrando _MAX_ total de registos)",
+                infoPostFix: "",
+                thousands: ",",
+                lengthMenu: "Mostrando _MENU_ registos por página.",
+                loadingRecords: "Carregando...",
+                processing: "Processando...",
+                search: "Filtrar:",
+                zeroRecords: "Nenhum registro encontrado.",
+                paginate: {
+                    first: "Primeira",
+                    last: "Última",
+                    next: "Seguinte",
+                    previous: "Anterior"
+                },
+                aria: {
+                    sortAscending: ": ative para classificar a coluna em ordem crescente.",
+                    sortDescending: ": ative para classificar a coluna em ordem decrescente."
+                }
+            }
+        });
+    })
+</script>
 
 <?php include '../../includes/footer.php'; ?>

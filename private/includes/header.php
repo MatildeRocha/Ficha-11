@@ -22,6 +22,11 @@ require_once __DIR__ . '/../../config/config.php';
         rel="stylesheet" />
     <!-- Font Awesome (ícones) -->
     <link rel="stylesheet" href="/Ficha%2008/private/assets/fontawesome/all.min.css" />
+    <!-- jQuery -->
+    <script src="/Ficha%2008/private/assets/jquery/jquery-3.6.0.min.js"></script>
+    <!-- DataTables CSS + JS -->
+    <link rel="stylesheet" href="/Ficha%2008/private/assets/datatables/datatables.min.css">
+    <script src="/Ficha%2008/private/assets/datatables/datatables.min.js"></script>
 </head>
 
 <body>
