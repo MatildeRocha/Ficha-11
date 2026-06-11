@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISEP Ginásio</title>
+    <!-- favicon -->
+     <link rel="shortcut icon" href="../../assets/img/gym125.png" type="image/png">
+    <!-- folha de estilos CSS -->
+     <link rel="stylesheet" href="../../assets/css/admin.css">
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap"rel="stylesheet"> 
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="../../assets/fontawesome/all.min.css">   
+</head>
+<body>
+<!-- Navbar -->
+<header class="bng-navbar-menu">
+    <div>
+        <!-- Logo e Nome -->
+        <a href="../../index.html">
+            <img src="../../assets/img/gym125_white.png" alt="Logo do ISEP Ginásio" height="50">
+        </a>
+        <h3>ISEP Ginásio</h3>
+    </div>
+    <div>
+        <button>Utilizador</button>
+    </div>
+</header> 
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <h4>Menu</h4>
+    <nav>
+        <a href="../clientes/lista.html"><i class="fas fa-users"></i> &ensp;Clientes</a>
+        <a href="../agendamento/agendamento.html"><i class="fas fa-calendar-alt"></i> &ensp;Agendamento de treinos</a> 
+        <a href="../planos/planos.html"><i class="fas fa-dumbbell"></i> &ensp;Planos de Treino</a>
+        <a href="../equipamentos/equipamentos.html"><i class="fas fa-cogs"></i> &ensp;Equipamentos</a> 
+        <a href="produtos-servicos.html"><i class="fas fa-box-open"></i>&ensp;Produtos e Serviços</a>
+    </nav>
+</aside> 
+
+<!-- Conteúdo Principal -->
+<main class="content">
+    <section>
+        <h2>Avaliação de Condições de Saúde</h2>
+        <p>Utilize este formulário para selecionar as condições de saúde relevantes do cliente. As informações escolhidas irão gerar uma recomendação personalizada para o plano de treino.</p>
+    </section>
+</main>
+
+<div class="form-wrapper">
+    <h2><strong><i class="fa-solid fa-dumbbell"></i> Avaliação de Condições de Saúde</strong></h2>
+    <hr>
+    <form oninput="avaliarCondicoes()">
+        <div>
+            <input type="checkbox" id="temProblemasCostas" name="condicao">
+            <label>Problemas de costas</label><br>
+            <label><input type="checkbox" id="estaGravida" name="condicao"> Grávida</label><br>
+            <label><input type="checkbox" id="temDiabetes" name="condicao"> Diabético/a</label>
+        </div>
+        <div class="form-group">
+            <label>Recomendação:</label>
+            <div id="mensagem" class="alert text-center"></div>
+        </div>
+    </form>
+</div>
+
+<script src="../../includes/js/funcoes.js"></script>
+    
+</body>
+</html>

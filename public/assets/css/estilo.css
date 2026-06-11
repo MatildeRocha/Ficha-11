@@ -1,0 +1,234 @@
+/* Seletor Universal - Remove margens e preenchimentos padrão */
+* {
+ margin: 0; /* Remove margens padrão */
+ padding: 0; /* Remove preenchimento padrão */
+ box-sizing: border-box; /* Inclui a borda e o preenchimento no cálculo do tamanho */
+ font-family: 'Titillium Web', Arial, Helvetica, sans-serif; /* Define a fonte padrão */
+} 
+
+/* Estilo da barra de navegação principal */
+.bng-navbar {
+ background-color: #343a40; /* Cor de fundo escura */
+ display: flex; /* Coloca os elementos em linha */
+ align-items: center; /* Centraliza os itens verticalmente */
+ justify-content: space-between; /* Espaço entre os blocos */
+ padding: 10px 20px; /* Espaçamento interno da barra */
+ position: sticky; /* Fixa a barra no topo ao fazer scroll */
+ top: 0; /* A barra fica colada ao topo */
+}
+
+/* Estilo para os <div> internos da barra de navegação */
+.bng-navbar div {
+ display: flex; /* Coloca os elementos lado a lado */
+ align-items: center; /* Alinha-os verticalmente ao centro */
+} 
+
+/* Estilo do logótipo na barra de navegação */
+.bng-navbar img {
+ height: 50px; /* Define a altura do logótipo */
+ margin-right: 10px; /* Espaço entre o logótipo e o texto */
+} 
+
+/* Estilo do texto com o nome do ginásio */
+.bng-navbar h3 {
+ font-size: 1.5em; /* Aumenta o tamanho da letra */
+ color: #dddddd; /* Cor do texto em cinza claro */
+}
+
+/* Estilos para os links centrais da navegação */
+.container-navegacao {
+ text-align: center; /* Centraliza os links */
+ padding: 20px; /* Adiciona espaçamento interno */
+} 
+
+.container-navegacao a {
+ font-size: 1.5em; /* Aumenta o tamanho da fonte dos links */
+ margin: 0px 50px; /* Espaçamento horizontal entre os links */
+ text-decoration: none; /* Remove o sublinhado */
+ color: #dddddd; /* Define a cor dos links */
+}
+
+.container-navegacao a:hover {
+ color: #ffffff; /* Muda a cor ao passar o mouse */
+} 
+
+/* Estilos para o botão da Área Cliente */
+.nav-cliente a {
+ color: #dddddd; /* Cor do texto */
+ text-decoration: none; /* Remove sublinhado */
+ font-size: 1.5em; /* Tamanho da fonte */
+ padding: 10px; /* Espaçamento interno */
+ border-radius: 5px; /* Bordas arredondadas */
+ transition: background 0.3s;/* Efeito suave na transição */
+} 
+
+/* Efeito ao passar o mouse no botão da Área Cliente */
+.nav-cliente a:hover {
+ background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+} 
+
+/* Estilos para o Rodapé */
+.footer-container {
+ display: flex; /* Ativa o layout flexível */
+ background-color: #343a40; /* Cor de fundo escura */
+ color: white; /* Cor do texto */
+ padding: 40px 20px; /* Espaçamento interno do rodapé */
+ flex-wrap: wrap; /* Permite que os itens se ajustem em ecrãs pequenos */
+ position: fixed; /* Fixa o rodapé no fundo da página */
+ bottom: 0; /* Alinha o rodapé à parte inferior */
+ left: 0; /* Alinha o rodapé à esquerda */
+ width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+} 
+.footer-section {
+ flex: 1; /* Faz com que as secções tenham larguras iguais */
+ min-width: 250px; /* Define uma largura mínima para cada secção */
+ padding: 10px; /* Espaçamento interno */
+ text-align: center; /* Centraliza o conteúdo de cada bloco */
+} 
+footer-section strong {
+ font-size: 1.2rem; /* Tamanho da fonte para os títulos */
+ display: block; /* Ocupa toda a largura disponível */
+ margin-bottom: 10px; /* Espaçamento abaixo do título */
+ color: #f8f9fa; /* Cor clara para destaque */
+} 
+.footer-section p {
+ font-size: 1rem; /* Tamanho padrão do texto */
+ color: #d6d6d6; /* Cor do texto em cinza claro */
+} 
+
+/* Texto Genérico */
+.container-texto-generico {
+ display: flex; /* Ativa o layout flexível */
+ justify-content: center; /* Centraliza os elementos horizontalmente */
+ flex-wrap: wrap; /* Permite quebra de linha em ecrãs menores */
+ gap: 20px; /* Espaço entre os elementos */
+ padding: 100px 40px; /* Espaçamento interno (superior/inferior e laterais) */
+ text-align: center; /* Centraliza o texto dentro dos artigos */
+ min-height: 100vh; /* Garante altura mínima de uma janela (ecrã) */
+} 
+
+/* Seção "Quem Somos" */
+#quem-somos {
+ text-align: center; /* Centra todo o conteúdo horizontalmente */padding: 100px 0; /* Espaçamento superior e inferior de 100px */}
+.quem-somos-content {
+ max-width: 800px; /* Largura máxima de 800px para limitar o conteúdo */ margin: 0 auto; /* Centra horizontalmente o conteúdo */
+}
+.quem-somos-content h1 {
+ font-size: 3em; /* Tamanho grande para o título principal */ margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+.quem-somos-content p {
+ font-size: 1.2em; /* Aumenta o tamanho da letra do parágrafo */ margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+}
+.quem-somos-content img {
+ width: 700px; /* Define uma largura fixa da imagem */
+ height: 165px; /* Define uma altura fixa da imagem */
+ display: block; /* Faz com que a imagem se comporte como bloco (para usar margin auto) */margin: 20px auto; /* Centraliza a imagem com margens acima e abaixo */ object-fit: cover; /* Corta a imagem de forma proporcional sem distorcer */}
+.button {
+ display: inline-block; /* Permite definir largura/altura e manter como botão em linha */background-color: #aaaaaa; /* Cor de fundo cinza-claro */
+ color: #fff; /* Cor do texto branca */
+ padding: 10px 20px; /* Espaçamento interno (vertical x horizontal) */ text-decoration: none; /* Remove o sublinhado do link */
+border-radius: 5px; /* Bordas arredondadas no botão */
+}
+
+/* Seção Equipa */
+/* Define o estilo dos títulos h2 da secção "nossa-equipa" e "servicos" */#nossa-equipa h2, #servicos h2 {
+ font-size: 3em; /* Aumenta o tamanho da fonte para maior destaque */ margin-bottom: 20px; /* Adiciona espaço abaixo do título */}
+/* Estilo para o container que agrupa todos os membros da equipa */
+.equipa-container {
+ display: flex; /* Organiza os elementos em linha (flexível) */flex-wrap: wrap; /* Permite que os elementos passem para a linha abaixo em ecrãs pequenos */justify-content: center; /* Centraliza os elementos horizontalmente */}
+/* Estilo individual de cada membro da equipa */
+.pessoa {
+ width: 300px; /* Define uma largura fixa para cada bloco */ margin: 20px; /* Espaçamento entre os blocos */
+ padding: 20px; /* Espaço interno dentro do bloco */
+ background-color: #eee; /* Cor de fundo cinzenta clara */
+ border-radius: 5px; /* Bordas ligeiramente arredondadas */ text-align: center; /* Centraliza o conteúdo (imagem, nome, cargo) */}
+/* Estilo para a imagem de cada pessoa */
+.pessoa img {
+ width: 100px; /* Largura fixa da imagem */
+ height: 100px; /* Altura fixa da imagem */
+ border-radius: 50%; /* Transforma a imagem num círculo */
+ margin-bottom: 10px; /* Espaço entre a imagem e o nome */
+}
+section {
+ padding: 100px 40px; /* Espaçamento interno nas secções (superior/inferior e laterais) */ 
+ text-align: center; /* Centraliza todo o conteúdo textual por padrão */
+ min-height: 100vh; /* Garante que cada secção tenha pelo menos a altura de uma janela inteira */
+}
+
+/* Estilos para a secção serviços e aulas de grupo */
+#servicos {
+ max-width: 1200px;
+ margin: 50px auto;
+ padding: 50px;
+ scroll-margin-top: 100px;
+}
+.servicos-container {
+ display: flex; /* Organiza os elementos internos em linha (flexível) */
+ flex-wrap: wrap; /* Permite que os elementos passem para a linha seguinte em ecrãs menores */
+ justify-content: center; /* Centraliza os elementos horizontalmente */
+}
+.servico {
+ width: 300px; /* Define a largura de cada “cartão” de serviço */ 
+ margin: 20px; /* Espaçamento entre os cartões */
+ padding: 20px; /* Espaçamento interno dentro de cada cartão */ 
+ background-color: #eee; /* Cor de fundo cinzenta clara para destacar cada serviço */ 
+ border-radius: 5px; /* Bordas arredondadas para um visual mais suave */ 
+ text-align: center; /* Centraliza o conteúdo dentro de cada serviço */
+}
+.servico img {
+ width: 100px; /* Largura da imagem */
+ height: 100px; /* Altura da imagem */
+ border-radius: 50%; /* Torna a imagem circular */
+ margin-bottom: 10px; /* Espaço entre a imagem e o texto seguinte */
+}
+
+/* Estilos para a secção Preçário */
+.pacotes-container {
+ display: flex; /* Organiza os pacotes lado a lado */
+ flex-wrap: wrap; /* Permite quebra de linha em ecrãs pequenos */
+ justify-content: center; /* Centraliza os pacotes horizontalmente */}
+.pacote {
+ width: 300px; /* Largura de cada cartão */
+ margin: 20px; /* Espaço entre os cartões */
+ padding: 20px; /* Espaço interno dentro de cada cartão */ 
+ background-color: #eee; /* Fundo cinzento claro */
+ border-radius: 5px; /* Bordas arredondadas */
+ text-align: center; /* Centraliza o conteúdo */
+}
+.pacote .preco {
+ font-size: 1.5em; /* Tamanho maior para destacar o preço */ 
+ font-weight: bold; /* Texto em negrito */
+ margin-bottom: 10px; /* Espaço abaixo do preço */
+}
+.pacote ul {
+ list-style: none; /* Remove os marcadores padrão da lista */
+ padding: 0; /* Remove preenchimento interno */ 
+ margin-bottom: 20px; /* Espaço entre a lista e o botão */
+}
+.pacote ul li {
+ margin-bottom: 5px; /* Espaço entre cada linha da lista */
+} 
+
+/* Estilos para a secção Contacto */
+#contacto form {
+ display: flex; /* Usa layout flexível */
+flex-direction: column; /* Organiza os elementos na vertical */
+max-width: 500px; /* Limita a largura do formulário */ 
+margin: 0 auto; /* Centraliza horizontalmente */
+}
+#contacto label {
+ margin-top: 10px; /* Espaço acima de cada rótulo (label) */}
+#contacto input, #contacto textarea {
+ padding: 10px; /* Espaço interno (dentro do campo) */ 
+ margin-bottom: 15px; /* Espaço abaixo de cada campo */
+ border: 1px solid #ddd; /* Borda cinzenta clara */
+ border-radius: 5px; /* Bordas arredondadas */
+}
+#contacto button {
+ background-color: #ddd; /* Cor de fundo do botão (cinzento claro) */ 
+ color: #fff; /* Cor do texto do botão (branco) */ 
+ padding: 10px 20px; /* Espaçamento interno do botão */
+ border: none; /* Remove a borda padrão */
+ border-radius: 5px; /* Bordas arredondadas */
+ cursor: pointer; /* Cursor tipo "mão" ao passar por cima */
+}

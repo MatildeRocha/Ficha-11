@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISEP Ginásio</title>
+    <!-- favicon -->
+     <link rel="shortcut icon" href="../../assets/img/gym125.png" type="image/png">
+    <!-- folha de estilos CSS -->
+     <link rel="stylesheet" href="../../assets/css/admin.css">
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap"rel="stylesheet"> 
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="../../assets/fontawesome/all.min.css">   
+</head>
+<body>
+<!-- Navbar -->
+<header class="bng-navbar-menu">
+    <div>
+        <!-- Logo e Nome -->
+        <a href="../../index.html">
+            <img src="../../assets/img/gym125_white.png" alt="Logo do ISEP Ginásio" height="50">
+        </a>
+        <h3>ISEP Ginásio</h3>
+    </div>
+    <div>
+        <button>Utilizador</button>
+    </div>
+</header> 
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <h4>Menu</h4>
+    <nav>
+        <a href="../clientes/lista.html"><i class="fas fa-users"></i> &ensp;Clientes</a>
+        <a href="../agendamento/agendamento.html"><i class="fas fa-calendar-alt"></i> &ensp;Agendamento de treinos</a> 
+        <a href="../planos/planos.html"><i class="fas fa-dumbbell"></i> &ensp;Planos de Treino</a>
+        <a href="../equipamentos/equipamentos.html"><i class="fas fa-cogs"></i> &ensp;Equipamentos</a> 
+        <a href="produtos-servicos.html"><i class="fas fa-box-open"></i>&ensp;Produtos e Serviços</a>
+    </nav>
+</aside> 
+
+<!-- Conteúdo Principal -->
+<main class="content">
+    <section>
+        <h2 onmouseover="console.log('Bem-vindo ao Cálculo de IMC do ISEP')">Cálculo de IMC</h2>
+        <p>Esta funcionalidade permite calcular o Índice de Massa Corporal (IMC),uma medida utilizada para avaliar se o peso de uma pessoa está adequado à sua altura.</p>
+    </section>
+</main>
+
+<script>
+    console.log("Engenharia Biomédica");
+</script>
+
+<div class="form-wrapper">
+    <h2><strong><i class="fa-solid fa-heart-pulse"></i> Calculadora de IMC</strong></h2>
+    <hr>
+    <form>
+        <div class="form-group">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso">
+        </div>
+        <div class="form-group">
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" name="altura">
+        </div>
+        <div class="form-group">
+            <label>Resultado:</label><br>
+            <span id="indicadorIMC"> <!-- texto será atualizado dinamicamente --></span>
+        </div>
+    </form>
+</div>
+
+<script src="../../includes/js/funcoes.js"></script>
+    
+</body>
+</html>
